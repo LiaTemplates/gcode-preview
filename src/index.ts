@@ -298,7 +298,7 @@ class WebComponent extends HTMLElement {
         ' - 78px )'
     }
 
-    this.config.renderTubes = false
+    //this.config.renderTubes = false
     if (!this.preview) {
       this.preview = GCodePreview.init(this.config)
     }
@@ -344,8 +344,6 @@ class WebComponent extends HTMLElement {
 
   addControl() {
     const layers = this.preview?.layers.length || 0
-
-    console.log('XXXXXXXXXXXXXXXXXXX layers', layers, this.preview?.layers)
 
     const control = document.createElement('div')
     control.style.display = 'flex'
